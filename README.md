@@ -1,24 +1,17 @@
-Task Manager API - Laravel 11 with Sanctum & File Uploads
+# Task Manager API - Laravel 11 with Sanctum & File Uploads
 
-🚀 Overview
+## 🚀 Overview
+This is a **Laravel 11 API** for managing tasks with **authentication, CRUD operations, and file uploads**. It is built with **Laravel Sanctum** for authentication and is optimized for seamless integration with a **React frontend**.
 
-This is a Laravel 11 API for managing tasks with authentication, CRUD operations, and file uploads. It is built with Laravel Sanctum for authentication and is optimized for seamless integration with a React frontend.
+## 📌 Features
+- ✅ **User Authentication** (Register, Login, Logout) using Laravel Sanctum
+- ✅ **Task Management** (Create, Read, Update, Delete)
+- ✅ **File & Image Uploads** (Documents & Images)
+- ✅ **Protected API Routes** (Requires authentication)
+- ✅ **CORS Configured** for frontend integration
+- ✅ **MySQL Database Support**
 
-📌 Features
-
-✅ User Authentication (Register, Login, Logout) using Laravel Sanctum
-
-✅ Task Management (Create, Read, Update, Delete)
-
-✅ File & Image Uploads (Documents & Images)
-
-✅ Protected API Routes (Requires authentication)
-
-✅ CORS Configured for frontend integration
-
-✅ MySQL Database Support
-
-🛠️ Installation & Setup
+## 🛠️ Installation & Setup
 
 ## **✅ Step 1: Install Laravel Herd on Windows**
 1️⃣ **Download Laravel Herd for Windows** from the official site:  
@@ -416,6 +409,15 @@ const createTask = async (title, description, file, image) => {
 🚀 **Now your React frontend can fully integrate with the Laravel 11 API!** 🚀  
 Let me know if you need more help! 😊
 
+
+
+## 📜 License
+This project is open-source and available under the **MIT License**.
+
+---
+
+### 👨‍💻 Need Help?
+If you have any issues, feel free to **open an issue** in the repository! 😊
 
 for Frontend Development 
 
