@@ -1,3 +1,109 @@
+### **🐘 Laravel Herd for Windows: Clone & Setup Your Project Locally**
+Since **Laravel Herd now supports Windows**, here’s how you can **clone your Laravel project from GitHub and set up your local environment using Herd.**
+
+---
+
+## **✅ Step 1: Install Laravel Herd on Windows**
+1️⃣ **Download Laravel Herd for Windows** from the official site:  
+👉 [https://herd.laravel.com/](https://herd.laravel.com/)  
+2️⃣ Install and open Herd.  
+3️⃣ Ensure **Herd is running** and check your **PHP, MySQL, and Redis versions** from the Herd settings.
+
+---
+
+## **✅ Step 2: Clone Laravel Project from GitHub**
+🔹 Open **Command Prompt (cmd)** or **Git Bash** and run:
+```bash
+git clone https://github.com/vinay-agam/task_manager
+cd task_manager
+```
+
+---
+
+## **✅ Step 3: Set Up Environment (.env)**
+1️⃣ **Create `.env` file** from `.env.example`:
+```bash
+cp .env.example .env
+```
+2️⃣ **Update database settings in `.env`**
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database_name
+DB_USERNAME=root
+DB_PASSWORD=
+```
+3️⃣ **Generate the application key**
+```bash
+php artisan key:generate
+```
+
+---
+
+## **✅ Step 4: Open the Project in Herd**
+1️⃣ Open **Herd** and go to the **“Sites”** tab.  
+2️⃣ Click **“Add Site”** and select the folder of your cloned project.  
+3️⃣ **Herd will assign a `.test` domain**, e.g.:
+   ```
+   http://task_manager.test
+   ```
+4️⃣ Open `http://task_manager.test` in the browser to check if Laravel loads.
+
+---
+
+## **✅ Step 5: Set Up the Database**
+1️⃣ Open **DBingin**, go to the **Database** tab, and click **“Start”**.  
+2️⃣ Create a new database named **`task_manager`**.  
+3️⃣ Run migrations & seeders:
+```bash
+php artisan migrate --seed
+```
+
+---
+
+
+
+---
+
+## **✅ Step 6: Use Local API in Frontend**
+### **🔹 Update React API Base URL**
+Ask your frontend developer to update their `.env` file in React:
+```env
+VITE_API_BASE_URL=http://your-project.test/api
+```
+Then, update **Axios requests**:
+```javascript
+const API_URL = import.meta.env.VITE_API_BASE_URL;
+
+const fetchTasks = async () => {
+  const token = localStorage.getItem('token');
+  const response = await axios.get(`${API_URL}/tasks`, {
+    headers: { Authorization: `Bearer ${token}` }
+  });
+  return response.data;
+};
+```
+
+---
+
+## **✅ Step 7: Test API in Postman**
+Use **Postman** with **`http://task_manager.test/api/`** instead of `http://127.0.0.1:8000/api/`.
+
+📌 **Example Request (GET Tasks)**
+```
+GET http://task_manager.test/api/tasks
+Headers:
+  Accept: application/json
+  Authorization: Bearer YOUR_ACCESS_TOKEN
+```
+
+---
+
+### **🎉 Done! Your Laravel 11 API is running locally using Herd!** 🚀
+
+
+---
 ### **📌 API Documentation: Laravel 11 Backend for React Frontend**
 This **API documentation** will help your frontend developer integrate the **Laravel 11 API** with the React frontend.
 
