@@ -1,7 +1,24 @@
-### **🐘 Laravel Herd for Windows: Clone & Setup Your Project Locally**
-Since **Laravel Herd now supports Windows**, here’s how you can **clone your Laravel project from GitHub and set up your local environment using Herd.**
+Task Manager API - Laravel 11 with Sanctum & File Uploads
 
----
+🚀 Overview
+
+This is a Laravel 11 API for managing tasks with authentication, CRUD operations, and file uploads. It is built with Laravel Sanctum for authentication and is optimized for seamless integration with a React frontend.
+
+📌 Features
+
+✅ User Authentication (Register, Login, Logout) using Laravel Sanctum
+
+✅ Task Management (Create, Read, Update, Delete)
+
+✅ File & Image Uploads (Documents & Images)
+
+✅ Protected API Routes (Requires authentication)
+
+✅ CORS Configured for frontend integration
+
+✅ MySQL Database Support
+
+🛠️ Installation & Setup
 
 ## **✅ Step 1: Install Laravel Herd on Windows**
 1️⃣ **Download Laravel Herd for Windows** from the official site:  
